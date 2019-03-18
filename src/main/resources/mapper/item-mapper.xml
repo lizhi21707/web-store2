@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.netease.assignment.dao.IItemDao">
+	<!-- result map -->
+	<!-- for column to attribute -->
+	<resultMap type="Item" id="itemResultMap">
+		<id property="itemId" column="itemid" />
+		<result property="itemTitle" column="itemtitle" />
+		<result property="itemPrice" column="itemprice" />
+		<result property="itemAbstract" column="itemabstract" />
+		<result property="itemContent" column="itemcontent" />
+		<result property="imageLocation" column="imagelocation" />
+		<result property="locationType" column="locationtype" />
+		<result property="valid" column="valid" />
+		<result property="count" column="count" />
+		<result property="sellerId" column="sellerid" />
+	</resultMap>
+
+	<!-- crud -->
+	<insert id="addItem" parameterType="Item">
+		insert into item
+		(itemtitle,
+		itemprice, itemabstract, itemcontent, imagelocation,sellerid,locationtype)
+		values
+		(#{itemTitle},#{itemPrice},#{itemAbstract},#{itemContent},#{imageLocation},#{sellerId},#{locationType})
+	</insert>
+
+	<delete id="deleteItem">
+		update item
+		set
+		valid = "false"
+		where itemid=#{itemId}
+	</delete>
+
+	<select id="getItem" resultMap="itemResultMap">
+		select I.*, sum(T.count) as count
+		from item I
+		left join Trade T
+		on
+		I.itemid = T.itemid
+		where
+		I.valid = "true"
+		and
+		I.itemId = #{itemId}
+	</select>
+
+	<select id="getItems" resultMap="itemResultMap">
+		select * from item where valid="true";
+	</select>
+
+	<select id="getBoughtItems" resultMap="itemResultMap">
+		select I.*, T.count
+		from
+		item I
+		inner join trade T
+		on
+		I.itemid = T.itemid
+		<if test="_parameter >= 0">
+			where
+			T.buyerid =
+			#{_parameter}
+		</if>
+	</select>
+
+
+	<select id="getUnBoughtItems" resultMap="itemResultMap"
+		parameterType="int">
+		select I.*
+		from
+		item I left join trade T
+		on I.itemid = T.itemid
+		where
+		T.itemid is NULL
+		<if test="_parameter >= 0">
+			or(
+			T.buyerid != #{_parameter})
+		</if>
+	</select>
+
+	<update id="updateItem" parameterType="Item">
+		update item
+		set
+		itemtitle=#{itemTitle},
+		itemprice=#{itemPrice},
+		itemabstract=#{itemAbstract},
+		itemcontent=#{itemContent},
+		imagelocation=#{imageLocation},
+		locationtype=#{locationType}
+		where
+		itemid = #{itemId}
+	</update>
+
+	<select id="getMaxItemId" resultType="int">
+		select max(itemid) from
+		item;
+	</select>
+
+	<select id="getSellerItems" parameterType="int" resultMap="itemResultMap">
+		select I.*, sum(T.count) as count
+		from item I
+		left join Trade T
+		on
+		I.itemid = T.itemid
+		where
+		I.valid = "true"
+		and
+		I.sellerid = #{sellerId}
+		group by I.itemid
+	</select>
+</mapper>
+

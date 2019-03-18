@@ -1,0 +1,94 @@
+#detail-title h1 {
+	/*border: 1px solid black;*/
+	margin: 30px 0px 10px 0px;
+}
+
+#detail-title hr {
+	/*border: 1px solid black;*/
+	margin-bottom: 20px;
+}
+
+#detail-img {
+	float: left;
+}
+
+#detail-img img {
+	width: 200px;
+}
+
+#detail-info {
+	float: left;
+	margin: 0px 0px 0px 20px;
+	border: 1px solid black;
+	width: 550px;
+	padding: 10px;
+}
+
+#detail-info-abstract {
+	margin-bottom: 10px;
+	/*border: 1px solid black;*/
+}
+
+#detail-info-abstract h2 {
+	margin: 0;
+	display: inline-block;
+}
+
+#detail-info-price {
+	margin-top: 30px;
+	font-size: 18px;
+}
+
+#detail-info-price span {
+	color: red;
+	margin-right: 5px;
+}
+
+#detail-info-count {
+	margin: 15px 0px 0px 0px;
+}
+
+#input-count {
+	padding: 5px;
+	width: 30px;
+	text-align: center;
+}
+
+#btn-add, #btn-minus {
+	height: 30px;
+	width: 30px;
+	margin: 2px;
+}
+
+#detail-info-btn {
+	clear: right;
+	margin-top: 80px;
+}
+
+#detail-info-btn a {
+	text-decoration: none;
+	color: #D02928;
+}
+
+#detail-info-btn a:link, #detail-info-btn a:visited {
+	color: #D02928;
+}
+
+#detail-info-btn a:hover {
+	text-decoration: underline;
+}
+
+hr {
+	background-color: #D02928;
+	height: 1px;
+	border: 0px;
+}
+
+#detail-total {
+	clear: both;
+	padding-top: 20px;
+}
+
+#footer {
+	/* position: fixed; */
+}

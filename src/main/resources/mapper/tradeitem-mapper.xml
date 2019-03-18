@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.netease.assignment.dao.ITradeDao">
+	<!-- result map -->
+	<!-- for column to attribute -->
+	<resultMap type="TradeItem" id="tradeItemResultMap">
+		<result property="userId" column="buyerid" />
+		<result property="itemId" column="itemid" />
+		<result property="itemTitle" column="itemtitle" />
+		<result property="imageLocation" column="imagelocation" />
+		<result property="locationType" column="locationtype" />
+		<result property="price" column="itemprice" />
+		<result property="time" column="tradetime" />
+		<result property="count" column="count" />
+	</resultMap>
+
+	<!-- crud -->
+	<insert id="addTradeItems">
+		insert into trade
+		(buyerid,itemid,count,tradetime,price)
+		values
+		<foreach item="trade" collection="list" separator="," index="index">
+			(#{trade.userId},#{trade.itemId},#{trade.count},#{trade.time},#{trade.price})
+		</foreach>
+	</insert>
+
+	<select id="getTrades" resultMap="tradeItemResultMap">
+		select
+		I.itemId,I.itemtitle,I.imagelocation,I.locationtype,T.tradetime,T.price,T.count
+		from
+		item I,trade T
+		where
+		I.itemid = T.itemid
+		and
+		T.buyerid = #{userId}
+	</select>
+
+	<!-- 这是第一种处理多参数方式,第二种是使用map,第三种是在Dao处使用注解,标明参数 -->
+	<select id="getTrade" resultMap="tradeItemResultMap">
+		select * from trade
+		where
+		itemid =
+		#{1}
+		and
+		buyerid = #{0}
+		Limit 1
+	</select>
+</mapper>
+

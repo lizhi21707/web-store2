@@ -1,0 +1,105 @@
+#content {
+	width: 700px;
+	margin: auto;
+}
+
+#chart-table {
+	width: 610px;
+	margin: auto;
+}
+
+#chart-title h1 {
+	text-align: center;
+}
+
+.table-title {
+	padding: 5px;
+}
+
+.table-header {
+	display: inline-block;
+	background-color: #D02928;
+	color: white;
+	text-align: center;
+}
+
+.table-header-title {
+	float: left;
+	width: 400px;
+	border: 1px solid white;
+	padding: 5px 0px 5px 0px;
+}
+
+.table-header-price {
+	float: left;
+	width: 100px;
+	border: 1px solid white;
+	padding: 5px 0px 5px 0px;
+}
+
+.table-header-number {
+	float: left;
+	width: 100px;
+	border: 1px solid white;
+	padding: 5px 0px 5px 0px;
+}
+
+.table-row {
+	clear: both;
+	display: inline-block;
+	text-align: center;
+	padding: 10px 0px 0px 0px;
+	border-bottom: 1px solid #D02928;
+}
+
+.table-row:hover {
+	background-color: whitesmoke;
+}
+
+.table-column-title {
+	float: left;
+	width: 400px;
+}
+
+.table-column-price {
+	float: left;
+	width: 100px;
+}
+
+.table-column-number {
+	float: left;
+	width: 100px;
+}
+
+#total {
+	display: block;
+	text-align: right;
+	border: none;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+#button {
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+}
+
+hr {
+	margin: 10px 0px 15px 0px;
+	background-color: #D02928;
+	height: 2px;
+	border: 0px;
+}
+
+#confirm {
+	width: 300px;
+	height: 40px;
+	margin-left: 150px;
+}
+
+#exit {
+	width: 100px;
+	height: 40px;
+	margin-left: 50px;
+}

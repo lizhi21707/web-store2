@@ -1,0 +1,68 @@
+#content {
+	/*border: 1px solid black;*/
+}
+
+#account-title {
+	text-align: center;
+}
+
+.account-item {
+	width: 600px;
+	margin: 10px auto;
+	padding: 20px;
+	border: 1px solid black;
+	height: 100px;
+}
+
+.account-item-img {
+	float: left;
+}
+
+.account-item-img img {
+	width: 100px;
+	height: 100px;
+}
+
+.account-item-info {
+	display: inline-block;
+}
+
+.account-item-title {
+	padding: 10px 0px 0px 20px;
+}
+
+.account-item-price {
+	float: left;
+	margin: 5px 150px 5px 20px;
+}
+
+.account-item-price span {
+	color: red;
+	margin-right: 10px;
+}
+
+.account-item-number {
+	float: left;
+	margin: 5px;
+}
+
+.account-item-number span {
+	color: red;
+	margin-right: 10px;
+}
+
+.account-item-date {
+	clear: both;
+	margin: 15px 0px 5px 20px;
+}
+
+#account-total {
+	margin-top: 30px;
+	text-align: right;
+	margin-right: 120px;
+}
+
+#account-total span {
+	color: red;
+	margin-right: 10px;
+}

@@ -1,0 +1,86 @@
+#publish-title {
+	text-align: center;
+}
+
+.aline {
+	text-align: center;
+	margin: 15px;
+}
+
+.title-block {
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 10px;
+}
+
+.title-label {
+	margin: 10px;
+	width: 100px;
+	/*	border: 1px solid black;*/
+}
+
+.input-block {
+	/*border: 1px solid black;*/
+	display: inline-block;
+}
+
+.label-hint {
+	display: none;
+	text-align: left;
+	color: red;
+	font: "微软雅黑";
+	font-size: 12px;
+	/*border: 1px solid black;*/
+}
+
+#publish-box input {
+	width: 400px;
+	padding: 10px;
+}
+
+#item-total textarea {
+	width: 425px;
+	padding: 10px;
+	vertical-align: top;
+	padding: 0px;
+}
+
+#item-id {
+	display: none;
+}
+
+#img-input-block {
+	text-align: left;
+	width: 430px;
+}
+
+#radio-choose input {
+	text-align: left;
+	width: 30px;
+	margin: 5px;
+}
+
+#file-block {
+	margin: 10px 0px 10px 0px;
+}
+
+#url-block {
+	width: 300px;
+	font-size: 12px;
+	display: none;
+	margin: 10px 0px 10px 0px;
+}
+
+#url-block label {
+	display: block;
+	padding: 10px 0px 10px 0px;
+}
+
+#item-btn {
+	margin-left: 80px;
+}
+
+#publish, #modify {
+	/*width: 200px;*/
+	height: 50px;
+}

@@ -1,0 +1,75 @@
+.item-box {
+	width: 240px;
+	height: 340px;
+	border: 1px solid black;
+	margin: 10px 12px 10px 12px;
+}
+
+.item-box:hover {
+	background-color: whitesmoke;
+}
+
+.item-link {
+	cursor: pointer;
+}
+
+.item-box-title {
+	text-align: center;
+	height: 40px;
+	padding: 15px 0px 10px 0px;
+}
+
+.item-box-img {
+	text-align: center;
+}
+
+.item-box-img img {
+	width: 200px;
+	height: 200px;
+}
+
+.item-box-price {
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+.item-box-price span {
+	font-size: 20px;
+	padding: 0px 5px 0px 0px;
+	color: red;
+}
+
+/*buyer*/
+.item-box-tip-buyer {
+	text-align: center;
+	height: 30px;
+}
+
+/*seller*/
+.item-box-seller {
+	/*border: 1px solid black;*/
+	height: 30px;
+}
+
+.item-box-tip-seller {
+	text-align: center;
+	float: left;
+	padding: 5px 0px 10px 20px;
+}
+
+.item-box-tip-seller span {
+	color: red;
+	padding: 0px 5px 0px 5px;
+}
+
+.item-box-btn-seller {
+	display: inline-block;
+	text-align: center;
+	float: right;
+	padding: 5px 20px 0px 0px;
+}
+
+.item-box-btn-seller a {
+	/*text-decoration: none;*/
+	color: black;
+}

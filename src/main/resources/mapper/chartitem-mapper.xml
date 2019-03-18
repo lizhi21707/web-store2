@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.netease.assignment.dao.IChartDao">
+	<!-- result map -->
+	<!-- for column to attribute -->
+	<resultMap type="ChartItem" id="chartItemResultMap">
+		<id property="id" column="id" />
+		<result property="userId" column="buyerid" />
+		<result property="itemId" column="itemid" />
+		<result property="itemTitle" column="itemtitle" />
+		<result property="price" column="itemprice" />
+		<result property="count" column="count" />
+	</resultMap>
+
+	<!-- crud -->
+	<insert id="addChartItem" parameterType="ChartItem">
+		insert into chart
+		(buyerid, itemid, count)
+		values
+		(#{userId}, #{itemId}, #{count})
+	</insert>
+
+	<delete id="deleteChartItem" parameterType="ChartItem">
+		delete from chart
+		where
+		itemid=#{itemId}
+	</delete>
+
+	<select id="getChartItems" resultMap="chartItemResultMap">
+		select
+		A.itemid,A.itemtitle,A.itemprice,B.id,B.count,B.buyerid
+		from item A
+		inner join chart B
+		on
+		A.itemid=B.itemid
+		where
+		B.buyerid = #{userId}
+	</select>
+
+	<update id="updateChartItem" parameterType="ChartItem">
+		update chart
+		set
+		count=#{count}
+		where
+		id=#{itemId}
+	</update>
+</mapper>
+

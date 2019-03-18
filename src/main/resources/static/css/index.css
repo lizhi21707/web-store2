@@ -1,0 +1,29 @@
+.item-box {
+	float: left;
+}
+
+#switch-btn {
+	display: block;
+	margin: 10px 0px 10px 0px;
+	width: 800px;
+	text-align: center;
+	background-color: #D02928;
+	padding: 10px 0px 8px 0px;
+}
+
+#switch-btn a {
+	text-decoration: none;
+	color: white;
+}
+
+#switch-btn a:hover {
+	color: black;
+}
+
+div p {
+	clear: both;
+}
+
+#footer {
+	clear: both;
+}

@@ -1,0 +1,53 @@
+#footer {
+	position: fixed;
+}
+
+#login {
+	margin: auto;
+	width: 600px;
+	margin-top: 160px;
+	/*border: 1px solid black;*/
+}
+
+#login-title {
+	text-align: center;
+}
+
+#login-form {
+	margin: auto;
+	margin-top: 50px;
+	width: 180px;
+	/*border: 1px solid #D02928;*/
+}
+
+.login-input {
+	margin: 5px 0px 20px 0px;
+}
+
+.login-input label {
+	padding: 5px;
+}
+
+.login-input input {
+	padding: 8px;
+}
+
+#autologin {
+	height: 18px;
+	width: 18px;
+}
+
+#login-submit-div {
+	text-align: center;
+	margin: 10px;
+}
+
+#submit {
+	width: 80px;
+	height: 30px;
+}
+
+button {
+	height: 40px;
+	width: 100px;
+}
