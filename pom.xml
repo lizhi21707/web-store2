@@ -8,7 +8,7 @@
         <version>1.5.10.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.netease.assignment</groupId>
+    <groupId>com.example.assignment</groupId>
     <artifactId>web-store2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>web-store2</name>
