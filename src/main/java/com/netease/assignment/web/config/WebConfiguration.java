@@ -3,15 +3,12 @@ package com.netease.assignment.web.config;
 import com.netease.assignment.web.filter.ChartFiler;
 import com.netease.assignment.web.interceptor.*;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -63,15 +60,4 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
 
         return registrationBean;
     }
-
-    @Bean
-    public ServletRegistrationBean servletRegistrationBean(DispatcherServlet dispatcherServlet) {
-        ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean();
-        servletRegistrationBean.setServlet(dispatcherServlet);
-        servletRegistrationBean.setOrder(0);
-        servletRegistrationBean.setLoadOnStartup(0);
-        servletRegistrationBean.setUrlMappings(Collections.singleton("/*"));
-        return servletRegistrationBean;
-    }
-
 }

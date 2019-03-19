@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MyRestController {
 
-    @RequestMapping("/test.json")
+    @RequestMapping("/api/v1/test")
     public String test() {
         return "djddjd";
     }
